@@ -3,7 +3,8 @@ npm run eject
 
 ### 支持rem
 
-head下面
+放在public/index.html  head下面
+50基数
     <script>
       (function (doc, win) {
           var docEl = doc.documentElement,
