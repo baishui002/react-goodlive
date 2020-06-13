@@ -11,7 +11,8 @@ class HomeHot extends React.Component {
     }
   }
   componentDidMount() {
-    reqHomeHot1()
+    const { city } = this.props
+    reqHomeHot1(city)
       .then(res => res.json())
       .then(res => {
         // console.log(1, res)
@@ -19,7 +20,7 @@ class HomeHot extends React.Component {
           homehotdata1: res
         })
       })
-    reqHomeHot2()
+    reqHomeHot2(city)
       .then(res => res.json())
       .then(res => {
         // console.log(2, res)

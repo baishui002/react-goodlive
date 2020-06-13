@@ -18,7 +18,6 @@ npm run eject
                           docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
                       }
                   };
-
           if (!doc.addEventListener) return;
           win.addEventListener(resizeEvt, recalc, false);
           doc.addEventListener('DOMContentLoaded', recalc, false);

@@ -4,13 +4,12 @@ import { connect } from 'react-redux'
 import * as cityAction from '../actions/city'
 
 class App extends React.Component {
-  componentDidMount() {
+  componentWillMount() {
     /**
-     * 初始化需求
-     *    1.城市初始化 --> 模拟调用定位接口 
-     * 
-     */
-    // console.log(this.props)
+ * 初始化需求
+ *    1.城市初始化 --> 模拟调用定位接口 
+ * 
+ */
     const city = localStorage.getItem('city') || '深圳'
     this.props.cityAction.initCity({
       cityName: city
