@@ -15,7 +15,6 @@ class HomeHot extends React.Component {
     reqHomeHot1(city)
       .then(res => res.json())
       .then(res => {
-        // console.log(1, res)
         this.setState({
           homehotdata1: res
         })
@@ -23,7 +22,6 @@ class HomeHot extends React.Component {
     reqHomeHot2(city)
       .then(res => res.json())
       .then(res => {
-        // console.log(2, res)
         this.setState({
           homehotdata2: res
         })

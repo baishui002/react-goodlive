@@ -3,7 +3,7 @@ var router = express.Router();
 var config = require("./config.js");
 var url = require("url");
 var homehot = require("./data/home/hotdata")
-
+var searchData = require('./data/search')
 
 router.get(config.homehot1, function (req, res) {
   const city = url.parse(req.url, true).query.city
@@ -17,4 +17,11 @@ router.get(config.homehot2, function (req, res) {
   res.send(homehot.hot2)
 })
 
-module.exports = router;
+router.get(config.search, function (req, res) {
+  const city = url.parse(req.url, true).query.city
+  const content = url.parse(req.url, true).query.content
+  console.log(city, content)
+  res.send(searchData)
+})
+
+module.exports = router

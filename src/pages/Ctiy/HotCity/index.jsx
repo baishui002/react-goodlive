@@ -12,11 +12,9 @@ export default class HotCity extends React.Component {
   }
   clickHandler(cityName) {
     this.props.cityNameHandler(cityName)
-    // console.log(cityName)
   }
 
   render() {
-    console.log(1, this.props)
     return (
       <div className="city-list-container">
         <h3>热门城市</h3>
