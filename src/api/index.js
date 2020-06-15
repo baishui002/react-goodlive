@@ -8,6 +8,6 @@ export function reqHomeHot2(city) {
   return getData(`/api/homehot2?city=${city}`)
 }
 
-export function reqSearch(city, content) {
-  return getData(`/api/search?city=${city}&content=${content}`)
+export function reqSearch(city, content, page) {
+  return getData(`/api/search?city=${city}&content=${content}&page=${page}`)
 }

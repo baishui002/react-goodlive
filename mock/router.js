@@ -20,7 +20,8 @@ router.get(config.homehot2, function (req, res) {
 router.get(config.search, function (req, res) {
   const city = url.parse(req.url, true).query.city
   const content = url.parse(req.url, true).query.content
-  console.log(city, content)
+  const page = url.parse(req.url, true).query.page
+  console.log(city, content, page)
   res.send(searchData)
 })
 
